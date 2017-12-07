@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="v2.1" path="/integration-gateway-tra-external/ws/rest/purchase/booking/cisl/v2.1" id="989cac76-ba8c-4feb-b729-af7e171fdf63" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="989cac76-ba8c-4feb-b729-af7e171fdf63fileName">v2.1</con:setting></con:settings><con:parameters/><con:method name="Method 1" id="b13bc1ac-287b-4f70-97e9-d995fd3f793f" method="POST"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>text/html;charset=utf-8</con:mediaType><con:status>405</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>500</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="cccc08a3-de71-48b4-a3fa-552f7caf7494" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://172.30.25.16:8080</con:endpoint><con:request>{
+	"policyOffering": {
+		"securityKey":"H7ytty75uyfrutycvodrsxoi97werw45ty",
+		"reductions": [{
+			"code": "PROMO1"
+		}],
+		"agent": {
+			"agentNumber": "1"
+		},
+		"salesChannel": "Integrated",
+		"partnerShipCode": "OPN",
+		"subscriptionCountry": "AT",
+		"source": "chatbot",
+		"purchaseDate": "26/10/2017",
+		"currency": "EUR",
+		"language": "en",
+		"agencyId": "AZM002",
+		"isParticipantUploaded": false
+	},
+	"policy": {
+		"commissions": [{
+			"commissionType": "type",
+			"commissionValue": "value"
+		}],
+		"reductions": [{
+			"code": "PROMO1"
+		}],
+		"comment": "comment",
+		"salesChannel": "Integrated",
+		"currency": "EUR",
+		"source": null,
+		"tariffType": null,
+		"purchaseDate": "26/10/2017",
+		"productOfferingSign": "CANF",
+		"offeringSortingNumber": 1,
+		"productOfferingCategory": null,
+		"offeringDisplayName": "Cancellation Family",
+		"language": "en",
+		"agent": {
+			"agentNumber": "123"
+		},
+		"agencyId": "123",
+		"originalGrossPremium": null,
+		"grossPremium": "30",
+		"riskPerson": "as",
+		"policyHolder": {
+			"self": "1",
+			"firstName": "as",
+			"lastName": "asa",
+			"personalTitles": ["as"],
+			"dateOfBirth": "01/01/1999",
+			"categoryName": "adult",
+			"nationality": "AF",
+			"emailChannel": [{
+				"email": "a@g.com"
+			}],
+			"mailChannel": [{
+				"address": {
+					"countryCode": "AF",
+					"city": "aa",
+					"zipCode": "a",
+					"street": "a",
+					"streetNumber": "a",
+					"stairwayNumber": "a",
+					"doorNumber": "aa"
+				}
+			}],
+			"identificationDocument": null
+		}
+	},
+	"insuredPerson": [{
+		"person": {
+			"self": "1",
+			"firstName": "as",
+			"lastName": "asa",
+			"personalTitles": ["as"],
+			"dateOfBirth": "01/01/1999",
+			"categoryName": "adult",
+			"nationality": "AF",
+			"emailChannel": [{
+				"email": "a@g.com"
+			}],
+			"mailChannel": [{
+				"address": {
+					"countryCode": "AF",
+					"city": "aa",
+					"zipCode": "a",
+					"street": "a",
+					"streetNumber": "a",
+					"stairwayNumber": "a",
+					"doorNumber": "aa"
+				}
+			}],
+			"identificationDocument": null,
+			"policyHolderType": "POLICYHOLDER"
+		}
+	}, {
+		"person": {
+			"self": "2",
+			"firstName": "as",
+			"lastName": "as",
+			"personalTitles": ["as"],
+			"policyHolderType": "INSURED",
+			"dateOfBirth": "01/01/2010",
+			"categoryName": "child",
+			"emailChannel": null,
+			"identificationDocument": null
+		}
+	}],
+	"paymentData": {
+		"owner": {
+			"self": "1",
+			"firstName": "as",
+			"lastName": "asa",
+			"personalTitles": ["as"],
+			"dateOfBirth": "01/01/1999",
+			"categoryName": "adult",
+			"nationality": "AF",
+			"emailChannel": [{
+				"email": "a@g.com"
+			}],
+			"mailChannel": [{
+				"address": {
+					"countryCode": "AF",
+					"city": "aa",
+					"zipCode": "a",
+					"street": "a",
+					"streetNumber": "a",
+					"stairwayNumber": "a",
+					"doorNumber": "aa"
+				}
+			}],
+			"identificationDocument": null
+		},
+		"eClass": "Card Payment",
+		"cardCompany": "Visa",
+		"cardNumber": "4111111111111111",
+		"validityDate": "04/18",
+		"cardHolder": "Pooja",
+		"token": "123"
+	},
+	"voyage": {
+		"voyageCategory": "Individual",
+		"voyageType": "round-trip",
+		"departureDate": "27/10/2017",
+		"arrivalDate": "28/10/2017",
+		"bookingDate": null,
+		"departure": {
+			"country": "AT"
+		},
+		"destinations": [{
+			"country": "AT",
+			"area": "AT"
+		}],
+		"travelersCategories": [{
+			"categoryName": "child",
+			"numberOfTravellers": 1,
+			"pricePerCategory": "100"
+		}, {
+			"categoryName": "adult",
+			"numberOfTravellers": 1,
+			"pricePerCategory": "100"
+		}]
+	},
+	"quotationId": null
+}</con:request><con:originalUri>http://172.30.25.16/integration-gateway-tra-external/ws/rest/purchase/booking/cisl/v2.1</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource>

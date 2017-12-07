@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="c8020b04-f4ed-45de-a053-3ddecd527e71" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Quotation - 1 child 1 adult - Integrated - Annual" searchProperties="true" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="c8020b04-f4ed-45de-a053-3ddecd527e71fileName">Quotation---1-child-1-adult---Integrated---Annual</con:setting></con:settings><con:testStep type="restrequest" name="V2.1 1 - Request 1" id="2a2dc314-3402-432c-a77d-e15b6155e489"><con:settings/><con:config service="http://172.30.93.72:8080" resourcePath="/integration-gateway-tra-external/ws/rest/offer/pricing/cisl/v2.1" methodName="V2.1 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="V2.1 1 - Request 1" id="52f65dcd-781e-422d-848a-4083c6f3be44" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://172.30.25.16:8080</con:endpoint><con:request>{
+	"voyage": {
+		"destination": [{
+			"country": "AT",
+			"area": "AT"
+		}],
+		"travelersCategories": [{
+			"categoryName": "child",
+			"numberOfTravellers": 1,
+			"pricePerCategory": 100
+		}, {
+			"categoryName": "adult",
+			"numberOfTravellers": 1,
+			"pricePerCategory": 100
+		}],
+		"departure": {
+			"country": "AT"
+		},
+		"voyageType": "annual",
+		"policyDate": "26/10/2017",
+		"departureDate": "27/10/2017",
+		"arrivalDate": "28/10/2017",
+		"tripPriceGroupError": false,
+		"tripPrice": "",
+		"voyageCategory": "Individual"
+	},
+	"policyOffering": {
+		"securityKey":"H7ytty75uyfrutycvodrsxoi97werw45ty",
+		"reductions": [{
+			"code": "PROMO1"
+		}],
+		"agent": {},
+		"salesChannel": "Integrated",
+		"partnerShipCode": "OPN",
+		"subscriptionCountry": "AT",
+		"source": "chatbot",
+		"purchaseDate": "25/10/2017",
+		"currency": "EUR",
+		"language": "en"
+	},
+	"contractFilter": [{
+		"filterType": "GroupId",
+		"filterCode": "Annual"
+	}, {
+		"customFieldType": "holidays",
+		"customFieldCode": "KindOfTrip"
+	}]
+}</con:request><con:originalUri>http://172.30.93.72/integration-gateway-tra-external/ws/rest/offer/pricing/cisl/v2.1</con:originalUri><con:assertion type="Simple Contains" id="68c41380-3db7-4863-8ddd-4b835e391d0b" name="Contains"><con:configuration><token>SUCCESS</token><ignoreCase>true</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Valid HTTP Status Codes" id="43af32b9-8e86-4c33-9f3b-84aa8c185e0e" name="Valid HTTP Status Codes"><con:settings/><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase>

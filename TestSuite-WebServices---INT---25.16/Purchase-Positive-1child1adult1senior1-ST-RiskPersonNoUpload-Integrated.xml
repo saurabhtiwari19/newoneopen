@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="e01bc9af-c736-4933-856d-123cdb7cc963" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Purchase-Positive-1child1adult1senior1-ST-RiskPersonNoUpload-Integrated" searchProperties="true" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="e01bc9af-c736-4933-856d-123cdb7cc963fileName">Purchase-Positive-1child1adult1senior1-ST-RiskPersonNoUpload-Integrated</con:setting></con:settings><con:testStep type="restrequest" name="Purchase" id="a1d34892-235a-4458-931c-bd0ced9ebfab"><con:settings/><con:config service="http://172.30.93.72:8080" resourcePath="/integration-gateway-tra-external/ws/rest/purchase/booking/cisl/v2.1" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Purchase" id="cccc08a3-de71-48b4-a3fa-552f7caf7494" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://172.30.25.16:8080</con:endpoint><con:request>{
+	"policyOffering": {
+	  	"securityKey":"H7ytty75uyfrutycvodrsxoi97werw45ty",
+		"reductions": [{
+			"code": "PROMO1"
+		}],
+		"agent": {
+			"agentNumber": "1"
+		},
+		"salesChannel": "Integrated",
+		"partnerShipCode": "OPN",
+		"subscriptionCountry": "AT",
+		"source": "chatbot",
+		"purchaseDate": "14/11/2017",
+		"currency": "EUR",
+		"language": "en",
+		"agencyId": "AZM001",
+		"isParticipantUploaded": false
+	},
+	"policy": {
+		"commissions": [{
+			"commissionType": "type",
+			"commissionValue": "value"
+		}],
+		"reductions": [{
+			"code": "PROMO1"
+		}],
+		"comment": "comment",
+		"salesChannel": "Integrated",
+		"currency": "EUR",
+		"source": null,
+		"tariffType": null,
+		"purchaseDate": "14/11/2017",
+		"productOfferingSign": "CANF",
+		"offeringSortingNumber": 1,
+		"productOfferingCategory": null,
+		"offeringDisplayName": "Cancellation Family",
+		"language": "en",
+		"agent": {
+			"agentNumber": "123"
+		},
+		"agencyId": "123",
+		"originalGrossPremium": null,
+		"grossPremium": "45",
+		"riskPerson": "risk",
+		"policyHolder": {
+			"self": "1",
+			"firstName": "as",
+			"lastName": "as",
+			"personalTitles": ["as"],
+			"dateOfBirth": "08/01/1999",
+			"categoryName": "adult",
+			"nationality": "FR",
+			"emailChannel": [{
+				"email": "a@g.com"
+			}],
+			"mailChannel": [{
+				"address": {
+					"countryCode": "FR",
+					"city": "as",
+					"zipCode": "11111",
+					"street": "as",
+					"streetNumber": "as",
+					"stairwayNumber": "asa",
+					"doorNumber": "as"
+				}
+			}],
+			"identificationDocument": null
+		}
+	},
+	"insuredPerson": [{
+		"person": {
+			"self": "1",
+			"firstName": "as",
+			"lastName": "as",
+			"personalTitles": ["as"],
+			"dateOfBirth": "08/01/1999",
+			"categoryName": "adult",
+			"nationality": "FR",
+			"emailChannel": [{
+				"email": "a@g.com"
+			}],
+			"mailChannel": [{
+				"address": {
+					"countryCode": "FR",
+					"city": "as",
+					"zipCode": "11111",
+					"street": "as",
+					"streetNumber": "as",
+					"stairwayNumber": "asa",
+					"doorNumber": "as"
+				}
+			}],
+			"identificationDocument": null,
+			"policyHolderType": "POLICYHOLDER"
+		}
+	}, {
+		"person": {
+			"self": "2",
+			"firstName": "as",
+			"lastName": "as",
+			"personalTitles": ["as"],
+			"policyHolderType": "INSURED",
+			"dateOfBirth": "01/01/2002",
+			"categoryName": "child",
+			"emailChannel": null,
+			"identificationDocument": null
+		}
+	}, {
+		"person": {
+			"self": "3",
+			"firstName": "as",
+			"lastName": "as",
+			"personalTitles": ["as"],
+			"policyHolderType": "INSURED",
+			"dateOfBirth": "01/01/1980",
+			"categoryName": "senior1",
+			"emailChannel": null,
+			"identificationDocument": null
+		}
+	}],
+	"paymentData": {
+		"owner": {
+			"self": "1",
+			"firstName": "as",
+			"lastName": "as",
+			"personalTitles": ["as"],
+			"dateOfBirth": "08/01/1999",
+			"categoryName": "adult",
+			"nationality": "FR",
+			"emailChannel": [{
+				"email": "a@g.com"
+			}],
+			"mailChannel": [{
+				"address": {
+					"countryCode": "FR",
+					"city": "as",
+					"zipCode": "11111",
+					"street": "as",
+					"streetNumber": "as",
+					"stairwayNumber": "asa",
+					"doorNumber": "as"
+				}
+			}],
+			"identificationDocument": null
+		},
+		"eClass": "Card Payment",
+		"cardCompany": "Visa",
+		"cardNumber": "4111111111111111",
+		"validityDate": "12/17",
+		"cardHolder": "Pooja",
+		"token": "123"
+	},
+	"voyage": {
+		"voyageCategory": "Individual",
+		"voyageType": "round-trip",
+		"departureDate": "16/11/2017",
+		"arrivalDate": "20/11/2017",
+		"bookingDate": null,
+		"departure": {
+			"country": "AT"
+		},
+		"destinations": [{
+			"country": "AT",
+			"area": "AT"
+		}],
+		"travelersCategories": [{
+			"categoryName": "child",
+			"numberOfTravellers": 1,
+			"pricePerCategory": "100"
+		}, {
+			"categoryName": "adult",
+			"numberOfTravellers": 1,
+			"pricePerCategory": "100"
+		}, {
+			"categoryName": "senior1",
+			"numberOfTravellers": 1,
+			"pricePerCategory": "100"
+		}]
+	},
+	"quotationId": null
+}</con:request><con:originalUri>http://172.30.25.16/integration-gateway-tra-external/ws/rest/purchase/booking/cisl/v2.1</con:originalUri><con:assertion type="Simple Contains" id="4a8daa34-bf28-4cf7-9eaf-fd7d907ab992" name="Contains policy number"><con:configuration><token>policyNumber":"OPNAT</token><ignoreCase>true</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="a6fd688e-90ae-4ba7-9f70-6cf301c39cca"><con:configuration/></con:assertion><con:assertion type="Simple Contains" id="e9b72c1e-32bd-476f-9c43-884295c09380" name="Contains success"><con:configuration><token>"status":"Success"</token><ignoreCase>true</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="b4549970-7417-45c2-8fe5-c0afa179c4e2" name="Contains transaction#"><con:configuration><token>"transactionNumber":"TX</token><ignoreCase>true</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase>
